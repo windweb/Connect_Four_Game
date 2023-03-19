@@ -111,3 +111,15 @@ while not game_over:
 
     turn += 1
     turn = turn % 2
+
+    if game_over:
+        print("Game Over")
+        restart = input("Do you want to play again? (y/n)")
+        if restart.lower() == "y":
+            board = create_board()
+            print("Great. Let's play again! Here's the new board")
+            print_board(board)
+            game_over = False
+            turn = 0
+        else:
+            break
